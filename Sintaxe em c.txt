@@ -1,0 +1,16 @@
+#include <stdio.h>   //Inicializa a biblioteca para trabalhar com valores de entrada e saída
+
+int main()   //Inicialização da main
+{
+    int x,y;   //Declaração da váriavel
+    float media;   //Declaração da váriavel
+    printf("Digite o valor de x:");   //printf mostra a mensagem pro usuário
+    scanf("%i",&x);    //scanf lê os dados que o usuário digita
+    printf("Digite o valor de y:");  //
+    scanf("%i",&y);
+    media =(x + y)/2.0;
+    
+    printf("Media igual %f",media);  //printf que mostra o resultado do programa
+    
+    return 0;   //Serve como verificação do programa
+}
