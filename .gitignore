@@ -1,5 +1,6 @@
 .claude/
 *.exe
+*.pdf
 funcoes/exemplo1
 funcoes/exemplo2
 funcoes/exemplo3
