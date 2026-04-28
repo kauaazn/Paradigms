@@ -1,18 +1,25 @@
 #include <stdio.h>
+
+// RECURSIVIDADE: a função chama a si mesma para resolver subproblemas menores
+// Sequência de Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, ...
+// Cada termo é a soma dos dois anteriores: f(n) = f(n-1) + f(n-2)
 int fibonacci(int n){
-    if (n==0){
+    // Casos base: interrompem a recursão
+    if (n == 0){
         return 0;
-    }else if(n == 1){
+    } else if (n == 1){
         return 1;
     }
-    return fibonacci(n-1) + fibonacci(n-2);     
+    // Caso recursivo: chama a si mesmo com valores menores até atingir os casos base
+    return fibonacci(n-1) + fibonacci(n-2);
 }
+
 int main(){
    int n;
    printf("Quantos termos: ");
-   scanf("%d",n);
+   scanf("%d", &n);   // ATENÇÃO: o original estava sem o & — bug de leitura (comportamento indefinido)
    for(int i = 0; i < n; i++){
-    printf("%d",fibonacci(i));
+    printf("%d ", fibonacci(i));   // imprime cada termo da sequência
    }
    return 0;
 }

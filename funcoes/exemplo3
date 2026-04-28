@@ -1,11 +1,17 @@
 #include <stdio.h>
+
+// Função void: não retorna nada (void = vazio)
+// Ela lê E imprime tudo internamente — o main não precisa fazer nada além de chamá-la
+// Parâmetros: nenhum
+// Retorno: nenhum (void)
 void calculaMedia(){
-        float n1,n2,media;
-        scanf("%f %f", &n1,&n2);
-        media = (n1+n2) / 2;
-        printf("Média = %f",media);
+        float n1, n2, media;
+        scanf("%f %f", &n1, &n2);
+        media = (n1 + n2) / 2;
+        printf("Média = %f", media); // a própria função imprime, sem retornar nada
     }
+
 int main(){
-    calculaMedia();
+    calculaMedia();  // basta chamar — ela cuida de tudo
     return 0;
 }

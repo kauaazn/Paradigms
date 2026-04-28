@@ -1,13 +1,18 @@
 #include <stdio.h>
+
+// Função que lê os dados DENTRO dela mesma (scanf interno) e retorna o resultado
+// Retorno: float (o valor da média calculada)
+// Parâmetros: nenhum — a função é responsável por coletar os dados
 float calculaMedia(){
-        float n1,n2,media;
-        scanf("%f %f", &n1,&n2);
-        media = (n1+n2) / 2;
-        return media;
+        float n1, n2, media;
+        scanf("%f %f", &n1, &n2);   // leitura feita pela própria função
+        media = (n1 + n2) / 2;
+        return media;               // devolve o resultado para quem chamou
     }
+
 int main(){
    float media;
-   media = calculaMedia();
+   media = calculaMedia();          // recebe o valor retornado pela função
    printf("Média = %f", media);
    return 0;
 }

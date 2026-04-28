@@ -1,13 +1,20 @@
 #include <stdio.h>
+
+// ATENÇÃO: esta função é void e não declara parâmetros,
+// mas no main ela é chamada com argumentos (n1, n2) — os valores são ignorados!
+// Em C, uma função declarada sem parâmetros aceita qualquer chamada sem erro,
+// mas os argumentos passados não chegam dentro da função.
+// Por isso ela faz seu próprio scanf e ignora o que foi passado — comportamento inesperado.
 void calculaMedia(){
-        float n1,n2,media;
-        scanf("%f %f", &n1,&n2);
-        media = (n1+n2) / 2;
-        printf("Média = %f",media);
+        float n1, n2, media;
+        scanf("%f %f", &n1, &n2);   // lê novamente, pois não recebeu os parâmetros
+        media = (n1 + n2) / 2;
+        printf("Média = %f", media);
     }
+
 int main(){
-    float n1,n2;
-    scanf("%f %f", &n1,&n2);
-    calculaMedia(n1,n2);
+    float n1, n2;
+    scanf("%f %f", &n1, &n2);
+    calculaMedia(n1, n2);   // os argumentos n1 e n2 são IGNORADOS pela função acima
     return 0;
 }

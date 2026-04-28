@@ -1,18 +1,24 @@
 #include <stdio.h>
-#define M 3
-#define N 3
+#define M 3   // número de linhas da matriz
+#define N 3   // número de colunas da matriz
+
+// Função que imprime uma matriz 2D de inteiros
+// Recebe o array como parâmetro — em C, arrays são passados por referência (ponteiro)
+// ATENÇÃO: a linha "print("\n")" dentro da função está errada — deveria ser printf("\n")
+//          pois "print" chama recursivamente a própria função com uma string, causando erro
 void print(int arr[M][N]){
     for(int i = 0; i < M; i++){
         for(int j = 0; j < N; j++){
-            printf("%d",arr[i][j]);
+            printf("%d", arr[i][j]);  // imprime cada elemento
         }
-        print("\n");
+        printf("\n");  // quebra de linha ao final de cada linha da matriz
     }
 }
 
 int main(){
+    // inicialização de matriz 2D com valores literais
+    // o primeiro índice (linhas) pode ser omitido quando os valores são fornecidos
     int arr[][3] = {{1,2,3},{4,5,6},{7,8,9}};
     print(arr);
     return 0;
 }
-

@@ -1,21 +1,27 @@
 #include <stdio.h>
 
+// PASSAGEM POR VALOR: C copia os valores ao passar para a função
+// A função recebe cópias de a, b e c — não as variáveis originais do main
+// Qualquer alteração feita dentro da função NÃO afeta o main
 void troca(int a, int b, int c);
 
 int main(){
     int a = 2, b = 3, c = 5;
 
-    printf("%d %d %d\n", a, b, c);
+    printf("%d %d %d\n", a, b, c);   // imprime: 2 3 5
 
-    troca(a, b, c);
+    troca(a, b, c);                  // passa cópias — original não muda
 
+    // a, b, c continuam com os valores originais (2 3 5), pois foram passados por valor
     printf("Troca = %d %d %d\n", a, b, c);
 
     return 0;
 }
 
+// Opera sobre cópias locais de a, b, c
+// As mudanças aqui não voltam para o main
 void troca(int a, int b, int c){
-    a = 3;
-    c = a + 4;
-    printf("%d %d %d\n", a, b, c);
+    a = 3;          // altera só a cópia local
+    c = a + 4;      // c local = 3 + 4 = 7
+    printf("%d %d %d\n", a, b, c);  // imprime: 3 3 7 (valores locais)
 }
