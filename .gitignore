@@ -1,11 +1,2 @@
-.claude/
 *.exe
-*.pdf
-*.pptx
-*.docx
-*.txt
-funcoes/exemplo1
-funcoes/exemplo2
-funcoes/exemplo3
-funcoes/exemplo4
-funcoes/exemplo5
+.claude/
