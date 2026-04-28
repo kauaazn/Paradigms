@@ -1,0 +1,12 @@
+#include <stdio.h>
+float calculaMedia(float n1, float n2){
+        float media;
+        media = (n1+n2) / 2;
+        return media;
+    }
+int main(){
+   float n1 = 2.2, n2 = 3.3, media;
+   media = calculaMedia(n1,n2);
+   printf("Média = %f", media);
+   return 0;
+}

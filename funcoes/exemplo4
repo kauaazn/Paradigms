@@ -1,0 +1,13 @@
+#include <stdio.h>
+void calculaMedia(){
+        float n1,n2,media;
+        scanf("%f %f", &n1,&n2);
+        media = (n1+n2) / 2;
+        printf("Média = %f",media);
+    }
+int main(){
+    float n1,n2;
+    scanf("%f %f", &n1,&n2);
+    calculaMedia(n1,n2);
+    return 0;
+}

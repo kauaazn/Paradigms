@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void troca(int a, int b, int c);
+
+int main(){
+    int a = 2, b = 3, c = 5;
+
+    printf("%d %d %d\n", a, b, c);
+
+    troca(a, b, c);
+
+    printf("Troca = %d %d %d\n", a, b, c);
+
+    return 0;
+}
+
+void troca(int a, int b, int c){
+    a = 3;
+    c = a + 4;
+    printf("%d %d %d\n", a, b, c);
+}
